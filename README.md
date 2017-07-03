@@ -15,13 +15,35 @@ It needs to be tested on:
 - Orange Pi
 - Odroid
 
-Instalation
------------
+Instructions to Install
+-----------------------
+
+1.  Installation on your ARM board
+
+    a. **showmyarm32** is the application service to run on your board with **32 bit OS**
+
+
+
+    b. **showmyarm64** is the application service to run on your board with **64 bit OS**
+
+
+
+2.  Installation on your PC running Windows (Host PC)
+
+    a. install_ShowMyArm.exe is the instalation program which will install the 32 bit or 64 bit Windows side.
+
+
+
+    b. Alternatively ShowMyArm.zip contains the windows binaries if you whish to install it manually.
+
+
 - to be completed
+
+
 
 Limitations
 -----------
-- Works in Internal Network only (Class C), not outside.
+- Works on local Network only (Class C), not outside world.
 - UDP packages must not be blocked on your router / firewall / proxy / or whatever filters or forge UDP packages.
 
 Issues
