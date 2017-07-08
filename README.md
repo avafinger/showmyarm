@@ -18,22 +18,34 @@ It needs to be tested on:
 Instructions to Install
 -----------------------
 
-1.  Installation on your ARM board (Daemon)
+1.  Testing on your ARM board (Daemon)
 
     a. **showmyarm32** is the application service to run on your board with **32 bit OS**
 
-       Run on the board: sudo ./showmyarm32 -port 8888 -board "Name of the board you want to show"
+
+		sudo ./showmyarm32 -port 8888 -board "Name of the board you want to show"
  
 
     b. **showmyarm64** is the application service to run on your board with **64 bit OS**
 
-       Run on the board: sudo ./showmyarm64 -port 8888 -board "Name of the board you want to show"
+
+		sudo ./showmyarm64 -port 8888 -board "Name of the board you want to show"
 
 
-Preliminary Test: missing some UDP packages
+
+2.  Install service for each ARM board (service)
+
+    - to be completed
 
 
-2.  Installation on your PC running Windows (Host PC)
+3.  Testing with on Linux X64_64 on your P (Host PC) without installing service
+
+
+		./findmyarm64 8888
+
+
+4.  Installation on your PC running Windows (Host PC)
+
 
     a. install_ShowMyArm.exe is the instalation program which will install the 32 bit or 64 bit Windows side.
 
@@ -41,12 +53,6 @@ Preliminary Test: missing some UDP packages
 
     b. Alternatively ShowMyArm.zip contains the windows binaries if you whish to install it manually.
 
-
-
-    c. Testing against Linux Box (64 bit)
-
-
-       ./findmyarm64 8888
 
        
 - to be completed
@@ -58,9 +64,10 @@ Limitations
 - Works on local Network only (Class C), not outside world.
 - UDP packages must not be blocked on your router / firewall / proxy / or whatever filters or forge UDP packages.
 
+
 Issues
 ------
-- to be completed
+- UDP packages missing, seems to be fixed
 
 
 ** THIS IS a WiP **
