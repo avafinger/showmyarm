@@ -31,14 +31,37 @@ Instructions to Install
 
 		sudo ./showmyarm64 -port 8888 -board "Name of the board you want to show"
 
+    c. If you don't want to login usinf TTL debug to install service, just add the call 
+       to showmyarm32 or 64 to your rc.local file, something like:
 
+		edit /etc/rc.local and add
+
+		#!/bin/sh -e
+		#
+		# rc.local
+		#
+		# This script is executed at the end of each multiuser runlevel.
+		# Make sure that the script will "exit 0" on success or any other
+		# value on error.
+		#
+		# In order to enable or disable this script just change the execution
+		# bits.
+		#
+		# By default this script does nothing.
+		sudo ./showmyarm32 -port 8888 -board "MyBoardName"
+		exit 0
+
+
+
+    d. Install service and reboot
 
 2.  Install service for each ARM board (service)
 
     - to be completed
 
 
-3.  Testing with on Linux X64_64 on your P (Host PC) without installing service
+3.  Testing with on Linux X64_64 on your PC (Host PC) without installing service on board side
+    *PS* it need showmyarm32 or showmyarm64 running on board side to get some output
 
 
 		./findmyarm64 8888
@@ -79,3 +102,4 @@ History Log:
 ------------
 - initial commit
 - initial test with board side and X86 side with linux binary for now
+- added MAC address to output
