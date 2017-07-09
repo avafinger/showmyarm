@@ -1,0 +1,51 @@
+./findmyarm64 8888
+Searching for boards... (wait)!
+
+------ Find Boards ------
+Found board on IP: 192.168.254.253
+Board = Intel_core2duo_x86_64
+
+Found board on IP: 192.168.254.101
+Board = opi-win-a64
+
+Found board on IP: 192.168.254.100
+Board = BananaPi R40
+
+
+------ Find Kernel version (build) ------
+Found board on IP: 192.168.254.253
+Kernel = Linux version 4.4.0-83-generic (buildd@lgw01-29) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #106-Ubuntu SMP Mon Jun 26 17:54:43 UTC 2017 (Ubuntu 4.4.0-83.106-generic 4.4.70)
+
+Found board on IP: 192.168.254.101
+Kernel = Linux version 3.10.105 (alex@svn) (gcc version 7.1.1 20170510 (Linaro GCC 7.1-2017.05) ) #1 SMP PREEMPT Thu Jun 15 15:51:55 BRT 2017
+
+Found board on IP: 192.168.254.100
+Kernel = Linux version 3.10.65-armhf (alex@svn) (gcc version 7.1.1 20170510 (Linaro GCC 7.1-2017.05) ) #1 SMP Sun Jun 25 18:33:24 BRT 2017
+
+
+------ Find Kernel Parameter for each board ------
+Found board on IP: 192.168.254.253
+Kernel Parameter = BOOT_IMAGE=/vmlinuz-4.4.0-83-generic root=UUID=e891ad92-d9ed-4e03-b7e5-5ea5de560507 ro quiet splash
+
+Found board on IP: 192.168.254.101
+Kernel Parameter = console=tty0 console=ttyS0,115200n8 no_console_suspend disp.screen0_output_mode=1080p60 earlycon=uart,mmio32,0x01c28000 mac_addr=36:c9:e3:f1:b8:05 root=/dev/mmcblk0p2 ro rootwait board_target=opi mmc_disk=0
+
+Found board on IP: 192.168.254.100
+Kernel Parameter = enforcing=1 initcall_debug=0 console=ttyS0,115200n8 console=tty1 no_console_suspend board=bpi-m2u loglevel=4 root=/dev/mmcblk0p2 rw rootwait  init=/init cma=524M panic=10 consoleblank=0 bootmenutimeout=10 datadev=mmcblk0p2 androidboot.serialno=14005190410c243108cc
+
+
+------ Find Interfaces in use for each board ------
+sendto Status = 3
+Found board on IP: 192.168.254.253
+Board Interfaces = enp2s0: 192.168.254.253 - MAC: e0:cb:4e:81:11:5a
+
+Found board on IP: 192.168.254.101
+Board Interfaces = eth0: 192.168.254.101 - MAC: 36:c9:e3:f1:b8:05
+
+Found board on IP: 192.168.254.100
+Board Interfaces = eth0: 192.168.254.100 - MAC: 1e:fe:8f:34:85:dd
+wlan0: 192.168.254.100 - MAC: 94:a1:a2:c2:67:2c
+
+Done searching.
+
+Found 3 board(s) on your local network!
