@@ -85,12 +85,12 @@ Instructions to Install
 Limitations
 -----------
 - Works on local Network only (Class C), not outside world.
-- UDP packet (layer 2) must not be blocked on your router / firewall / proxy / or whatever filters or forge UDP packet (layer 2).
+- UDP packet (layer 3) must not be blocked on your router / firewall / proxy / or whatever filters or forge UDP packet (layer 3).
 
 
 Issues
 ------
-- UDP packet (layer 2) missing, seems to be fixed
+- UDP packet (layer 3) missing, seems to be fixed
 
 
 ** THIS IS a WiP **
