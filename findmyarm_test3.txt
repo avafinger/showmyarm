@@ -1,0 +1,63 @@
+./findmyarm64 8888
+Searching for boards... (wait)!
+
+------ Find Boards ------
+sendto Status = 3
+Found board on IP: 192.168.254.102
+Board = BananaPi M1
+
+Found board on IP: 192.168.254.103
+Board = opi-win-a64
+
+Found board on IP: 192.168.254.101
+Board = BananaPi R40
+
+
+------ Find Kernel version (build) ------
+sendto Status = 3
+Found board on IP: 192.168.254.102
+Kernel = Linux version 3.4.112-sun8i (root@xenial) (gcc version 5.4.0 20160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.1) ) #14 SMP PREEMPT Wed Sep 14 20:29:31 CEST 2016
+
+Found board on IP: 192.168.254.103
+Kernel = Linux version 3.10.105 (alex@svn) (gcc version 7.1.1 20170510 (Linaro GCC 7.1-2017.05) ) #1 SMP PREEMPT Thu Jun 15 15:51:55 BRT 2017
+
+Found board on IP: 192.168.254.100
+Kernel = Linux version 3.10.105 (ubuntu@apps) (gcc version 5.4.1 20160904 (Ubuntu/Linaro 5.4.1-2ubuntu1~16.04) ) #2 SMP PREEMPT Sun Apr 16 18:39:34 BRT 2017
+
+Found board on IP: 192.168.254.101
+Kernel = Linux version 3.10.107-armhf (alex@svn) (gcc version 7.1.1 20170510 (Linaro GCC 7.1-2017.05) ) #1 SMP Fri Jul 14 13:51:09 BRT 2017
+
+
+------ Find Kernel Parameter for each board ------
+sendto Status = 3
+Found board on IP: 192.168.254.102
+Kernel Parameter = console=ttyS0,115200 console=tty1 root=/dev/mmcblk0p1 rootwait rootfstype=ext4 cgroup_enable=memory swapaccount=1 sunxi_ve_mem_reserve=0 sunxi_g2d_mem_reserve=0 sunxi_no_mali_mem_reserve sunxi_fb_mem_reserve=16 panic=10 consoleblank=0 enforcing=0 loglevel=7
+
+Found board on IP: 192.168.254.103
+Kernel Parameter = console=tty0 console=ttyS0,115200n8 no_console_suspend disp.screen0_output_mode=1080p60 earlycon=uart,mmio32,0x01c28000 mac_addr=36:c9:e3:f1:b8:05 root=/dev/mmcblk0p2 ro rootwait board_target=opi mmc_disk=0
+
+Found board on IP: 192.168.254.101
+Kernel Parameter = enforcing=1 initcall_debug=0 console=ttyS0,115200n8 console=tty1 no_console_suspend board=bpi-m2u loglevel=4 root=/dev/mmcblk0p2 rw rootwait  init=/init cma=524M panic=10 consoleblank=0 bootmenutimeout=10 datadev=mmcblk0p2 androidboot.serialno=14005190410c243108cc
+
+Found board on IP: 192.168.254.100
+Kernel Parameter = console=tty0 console=ttyS0,115200n8 no_console_suspend disp.screen0_output_mode=1080p60 earlycon=uart,mmio32,0x01c28000 mac_addr=36:c9:e3:f1:b8:05 root=/dev/mmcblk0p2 ro rootwait
+
+
+------ Find Interfaces in use for each board ------
+sendto Status = 3
+Found board on IP: 192.168.254.102
+Board Interfaces = eth0: 192.168.254.102 - MAC: 22:21:03:10:5e:1c
+
+Found board on IP: 192.168.254.103
+Board Interfaces = wlan0: 192.168.254.103 - MAC: e0:76:d0:de:28:90
+
+Found board on IP: 192.168.254.101
+Board Interfaces = wlan0: 192.168.254.101 - MAC: 94:a1:a2:c2:67:2c
+
+Found board on IP: 192.168.254.100
+Board Interfaces = wlan0: 192.168.254.100 - MAC: 34:c3:d2:13:f1:f8
+
+Done searching.
+
+Found 3 board(s) on your local network!
+
