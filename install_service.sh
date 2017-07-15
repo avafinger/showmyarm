@@ -49,7 +49,7 @@ cp -af "$SERVICE_FILE" /etc/init.d/.
 cp -af "$SERVICE_ARCH" /usr/local/bin/showmyarm
 update-rc.d "$SERVICE_FILE" defaults
 sleep 1
-service "$NAME" start
-#sleep 1
-#service "$NAME" status
-echo "Service installed. Please reboot!"
+service "$SERVICE_FILE" start
+sleep 1
+service "$SERVICE_FILE" status
+echo "Service installed! You can now reboot."
