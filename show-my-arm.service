@@ -1,0 +1,57 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          show-my-arm
+# Required-Start:    $all
+# Required-Stop:     glibc
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: ShowMyArm Board Service
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+DAEMON=/usr/local/bin/showmyarm
+
+# Gracefully exit if the package has been removed.
+test -x $DAEMON || exit 0
+
+. /lib/lsb/init-functions
+
+BOARD_NAME=<MYBOARD>
+PORT_USED=<MYPORT>
+
+showmyarm_board()
+{
+  if [ -f $DAEMON ] ; then
+     log_action_msg "ShowMyArm: init.."
+     showmyarm -board "$BOARD_NAME" -port "$PORT_USED"
+  fi
+}
+
+case "$1" in
+  start)
+	log_action_msg "ShowMyArm: starting.."
+	showmyarm_board
+	if [ -f /tmp/showmyarm.pid ] ; then
+       log_action_msg "ShowMyArm: running.."
+	fi
+	;;
+  restart|reload|force-reload)
+	echo "Error: argument '$1' not supported" >&2
+	exit 3
+	;;
+  stop)
+	# No-op
+	;;
+  status)
+  	if [ -f /tmp/showmyarm.pid ] ; then
+       log_action_msg "ShowMyArm: running.."
+	fi
+	# exit 0
+	;;
+  *)
+	echo "Usage: $0 start|stop" >&2
+	exit 3
+	;;
+esac
